@@ -6,15 +6,35 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      squares: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+      squares: ['🫧', 0, 0, 0, 0, 0, 0, 0, 0],
+      p1 : [],
+      p2 : [],
     }
   }
+
+  fillP1 = (item) => {
+    this.setState({p1: [...this.state.p1, item]})
+  }
+}
+
 
   render(){
     return(
       <>
         <h1>Tic Tac Toe</h1>
-        <Square />
+
+        <div className="gameboard">
+          {this.state.squares.map((value, index) => {
+            return(
+              <Square
+                key={index}
+                value={value}
+                index={index}
+                handleGamePlay={this.handleGamePlay}
+              />
+            )
+          })}
+        </div>
       </>
     )
   }
