@@ -6,22 +6,22 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      squares: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-      p1 : [],
-      p2 : [],
+      squares: [null, null, null, null, null, null, null, null, null],
+      player1 : '❌',
     }
   }
 
 click = (index) =>{
- let{squares}=this.state
- squares[index] ="X"
-  this.setState({
-    squares:squares
-  })
+ let{squares, player1}=this.state
+ if (squares[index] === null) {
+   squares[index] = player1
+   this.setState({squares: squares, player1: player1 === "❌"?"⭕️":"❌"})
+ }
+
 }
-    fillP1 = (item) => {
-    this.setState({p1: [...this.state.p1, item]})
-  } 
+  //   fillP1 = (item) => {
+  //   this.setState({p1: [...this.state.p1, item]})
+  // }
   render() {
     console.log(this.state.squares);
     return (
@@ -49,4 +49,3 @@ click = (index) =>{
 }
 
 export default App;
-

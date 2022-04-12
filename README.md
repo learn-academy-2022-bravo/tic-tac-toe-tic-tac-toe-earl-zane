@@ -12,7 +12,7 @@ This project will challenge your knowledge of React but should also be an exerci
 // win = contains 1,2,3, 4,5,6 1,4,7 ect
 
 
-- As a user, I should be able to click on a square to mark it.
+- As a user, I should be able to click on a square to mark it. (done)
 
 // get on click to display an 1
 // alternating X O to display on the onClick
@@ -20,6 +20,10 @@ This project will challenge your knowledge of React but should also be an exerci
 
 
 - As a user, my partner should be able to click on a square after me and see their mark.
+
+//
+
+
 - As a user, I shouldn't be able to click on a square that has already been selected.
 - As a user, when someone has won the game (3 squares in a row: horizontally, vertically, or diagonally) I should see a notice telling me who won.
 - As a user, I should not be able to continue playing the game after the game has been won.
