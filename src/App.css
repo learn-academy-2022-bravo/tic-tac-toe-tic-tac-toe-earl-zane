@@ -1,13 +1,19 @@
 .square{
   height: 200px;
   width: 200px;
-  border: 2px solid black;
+  border: 2px solid rgb(15, 158, 37);
   font-size: 150px;
   text-align: center;
+  margin: 0;
 }
 .gameboard {
+  color: rgb(15, 134, 238);
   display: flex;
   flex-wrap: wrap;
   width: 620px;
   margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  color: rgb(14, 221, 42);
 }

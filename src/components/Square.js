@@ -5,13 +5,13 @@ import React, { Component } from 'react'
 class Square extends Component{
 
   handleClick = () => {
-    this.props.handleGamePlay(this.props.index)
+    this.props.click(this.props.index)
   }
 
   render(){
     return(
       <>
-        <div className="square" onClick={() => this.props.fillPlate(value)}>
+        <div className="square" onClick =  {this.handleClick} >
           {this.props.value}
         </div>
       </>
